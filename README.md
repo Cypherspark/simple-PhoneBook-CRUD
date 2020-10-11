@@ -31,6 +31,7 @@ after cloning the project to your local machine, install the requirements and st
 $ cd simpleDjangoPhonebook
 $ pip install requirements
 $ python manage.py makemigrations
+$ python manage.py migrate
 $ python manage.py runserver
 ```
 
