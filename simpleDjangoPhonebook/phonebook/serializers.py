@@ -16,13 +16,6 @@ class PhoneBookSerializer(serializers.ModelSerializer):
         return newPhoneBook
 
 
-    def update(self, instance, validated_data):
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        instance.save()
-        return instance
-
-
 class TagSerializer(serializers.ModelSerializer):
 
     class Meta(object):
@@ -105,13 +98,6 @@ class ContactSerializer(serializers.ModelSerializer):
         contactObject.numbers_list.add(*numbersObjects)
         contactObject.save()
         return contactObject
-
-
-    def update(self, instance, validated_data):
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        instance.save()
-        return instance
 
 
 
